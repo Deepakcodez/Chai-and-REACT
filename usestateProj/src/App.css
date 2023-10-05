@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  background: slategrey;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+h1 {
+  background: #525e69;
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+  color:rgb(202, 202, 202);  margin-bottom: 2rem;
+}
+h2{
+ color: #ffff;
+ margin-bottom: 1rem;
+}
+.screen{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1a2b1d;
+  height: 3rem;
+  width: 20rem;
+  background: #96c29e;
+  border: 2px solid #1d2b1f97;
+  border-radius: .5rem;
+  text-align: center;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.buttons{
+width: 20rem;
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+}
+button{
+  width: 45%;
+  padding: .5rem 0;
+  border: none;
+  border-radius: .5rem;
+  color: #00000088;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.164);
+}
+.add:hover{
+  background: rgb(95, 177, 255);
+  color: black;
+}
+.add{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background: rgb(153, 205, 253);
+}
+.sub{
+  background: rgb(241, 159, 159);
+  scale: 1.02;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
+}
+.sub:hover{
+  background: rgb(255, 102, 102);
+  scale: 1.02;
+  color: black;
+}
+.wrapper{
+  background: #c5ff98;
+  padding: 5rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
