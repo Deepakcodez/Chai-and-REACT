@@ -1,4 +1,4 @@
-import './App.css';
+  import './App.css';
 import Card from './Components/Card'
 import movies from './moviesData'
 
