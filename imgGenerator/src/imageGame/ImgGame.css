@@ -1,0 +1,48 @@
+.gamearea {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  background: slateblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.heading {
+  color: white;
+  text-align: center;
+}
+.input {
+  width: 17rem;
+  height: 3rem;
+  background: #edffff;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+}
+.imgbox {
+  height: 72vh;
+  width: 100%;
+  background: #0000003c;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.randomimg {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 22px 22px 44px #5a4dae, -22px -22px 44px #7a68ec;
+}
+.imgcontainer {
+  height: 10rem;
+  max-height: auto;
+  width: 10rem;
+  padding: 0.5rem;
+  background: yellow;
+}

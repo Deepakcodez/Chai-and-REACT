@@ -24,12 +24,12 @@ export default function Input() {
           placeholder="Enter Text Here"
           className=" border-2 w-[50%] border-blue-500  h-[2rem] px-2 whitespace-pre-line"
         />
+
+        
         <button
           className=" bg-blue-300 hover:bg-blue-500 ease-in duration-300  mt-2 py-1 px-3 rounded-full hover:scale-110 hover:text-white"
           onClick={onClickHandler}
-        >
-          send Data
-        </button>
+        >send Data</button>
       </div>
     </>
   );
