@@ -1,14 +1,16 @@
-import { createContext } from 'react';
 import Comp2 from './Comp2';
+import Context from './Context'
 
-const Data = createContext();
-
-export default function Comp1() {
+export default function Comp1(props) {
+  const state={
+    message:"this is message from comp3"
+  }
   return (
-    <Data.Provider value={"message from Comp1 to comp3"}>
+    <Context.Provider value={state} >
       <Comp2 />
-    </Data.Provider>
+      {props.children}
+    </Context.Provider>
   );
 }
 
-export { Data };
+export { Context };
