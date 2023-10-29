@@ -7,6 +7,7 @@ import About from './Component/About'
 import Blogs from './Component/Blogs'
 import Contact from './Component/Contact'
 import Home from './Component/Home'
+import Errorpage from './Component/Errorpage'
 
 const router  = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router  = createBrowserRouter(
       <Route path='/about' element={<About/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/*' element={<Errorpage/>}/>
     </Route>
   
   )
