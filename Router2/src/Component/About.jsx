@@ -11,12 +11,14 @@ export default function About () {
   return (
 
     <>
+    <div className='h-[80vh]'>
     <h1>This is about</h1>
     <button className="bg-red-400 border-2 border-red-900 mx-6 px-4"
     onClick={gohome}
     >go to home</button>
     <button className="bg-red-400 border-2 border-red-900 mx-6 px-4"
     onClick={goback}>previous</button>
+    </div>
     </>
   )
 }

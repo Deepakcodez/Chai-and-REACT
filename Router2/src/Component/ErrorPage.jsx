@@ -4,7 +4,7 @@ import Header from './Header'
 export default function ErrorPage() {
   return (
     <>
-    <div>ErrorPage</div>
+    <div className='h-[80vh]'>ErrorPage</div>
     </>
   )
 }
