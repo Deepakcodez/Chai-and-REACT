@@ -4,7 +4,6 @@ import Header from './Header'
 export default function ErrorPage() {
   return (
     <>
-    <Header></Header>
     <div>ErrorPage</div>
     </>
   )
