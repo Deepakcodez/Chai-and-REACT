@@ -6,6 +6,7 @@ function Profile() {
     console.log('>>>>>>>>>>>', userName)
   return (
     <>
+    
     <div className="h-[80vh]">Hello {userName}</div>
     </>
   )
