@@ -5,6 +5,7 @@ import Blog from './component/Blog';
 import About from './component/About';
 import NotFound from './component/NotFound';
 import Navbar from './component/Navbar';
+import User from './component/User';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
   <Route path='/home' element={<Home/>}></Route>
   <Route path='/about' element={<About/>}></Route>
   <Route path='/blog' element={<Blog/>}></Route>
+  <Route path='/user/:name' element={<User/>}></Route>
   {/* <Route path='/*' element={<NotFound/>}></Route> */}
   <Route path='/*' element={<Navigate to="/" /> }></Route>
  </Routes>
