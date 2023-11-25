@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 function Navbar() {
   return (
     <>
-     <div className="cont bg-slate-500 p-3 text-cyan-100">
+     <div className="cont bg-slate-500 p-3 text-white">
         <ul className='flex gap-3 '>
-            <li> <Link to="/home">home</Link> </li>
-            <li>  <Link to='/about'>about</Link> </li>
-            <li><Link to='/blog'>blogs</Link> </li>
+            <li> <NavLink style={({isActive})=>{return {color:isActive?'red':'white'}}} to="/home">home</NavLink> </li>
+            <li>  <NavLink to='/about'>about</NavLink> </li>
+            <li><NavLink to='/blog'>blogs</NavLink> </li>
         </ul>
      </div>
     </>

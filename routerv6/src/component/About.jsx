@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {  NavLink} from 'react-router-dom'
 
 function about() {
   return (
     <>
         <div className=' bg-slate-400 h-72'>about <br/>
         <h3 className='bg-red-200'>users</h3>
-        <Link to="/user/anil">anil</Link> <br />
-        <Link to="/user/peter">peter</Link>
+        <NavLink to="/user/anil">anil</NavLink> <br />
+        <NavLink to="/user/peter">peter</NavLink>
         </div>
     </>
   )
