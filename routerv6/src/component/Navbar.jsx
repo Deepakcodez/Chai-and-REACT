@@ -10,6 +10,7 @@ function Navbar() {
             <li><NavLink to='/blog'>blogs</NavLink> </li>
             <li><NavLink to='/searchparam'>searchParam</NavLink> </li>
             <li><NavLink to='/navigate'>navigate</NavLink> </li>
+            <li><NavLink to='/nestedRout'>NestedRout</NavLink> </li>
         </ul>
      </div>
     </>

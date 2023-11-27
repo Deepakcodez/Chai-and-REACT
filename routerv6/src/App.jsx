@@ -8,6 +8,10 @@ import Navbar from './component/Navbar';
 import User from './component/User';
 import NavigatePG from './component/NavigatePG';
 import Searchparam from './component/Searchparam';
+import NestedRoute from './component/NestedRoute';
+import Pg1 from './component/Pg1';
+import Pg3 from './component/Pg3';
+import Pg2 from './component/Pg2';
 
 function App() {
   return (
@@ -24,6 +28,12 @@ function App() {
   <Route path='/navigate' element={<NavigatePG/>}></Route>
   {/* <Route path='/*' element={<NotFound/>}></Route> */}
   <Route path='/*' element={<Navigate to="/" /> }></Route>
+  <Route path='/nestedRout/' element={<NestedRoute /> }>
+  <Route path='Pg1' element={<Pg1/>}></Route>
+  <Route path='Pg2' element={<Pg2/>}></Route>
+  <Route path='Pg3' element={<Pg3/>}></Route>
+  </Route>
+  
  </Routes>
  
  </BrowserRouter>
