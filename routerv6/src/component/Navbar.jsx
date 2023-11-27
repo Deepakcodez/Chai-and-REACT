@@ -8,6 +8,7 @@ function Navbar() {
             <li> <NavLink style={({isActive})=>{return {color:isActive?'red':'white'}}} to="/home">home</NavLink> </li>
             <li>  <NavLink to='/about'>about</NavLink> </li>
             <li><NavLink to='/blog'>blogs</NavLink> </li>
+            <li><NavLink to='/searchparam'>searchParam</NavLink> </li>
         </ul>
      </div>
     </>

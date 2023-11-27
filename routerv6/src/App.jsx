@@ -6,6 +6,7 @@ import About from './component/About';
 import NotFound from './component/NotFound';
 import Navbar from './component/Navbar';
 import User from './component/User';
+import Searchparam from './component/Searchparam';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
   <Route path='/about' element={<About/>}></Route>
   <Route path='/blog' element={<Blog/>}></Route>
   <Route path='/user/:name' element={<User/>}></Route>
+  <Route path='/searchparam' element={<Searchparam/>}></Route>
   {/* <Route path='/*' element={<NotFound/>}></Route> */}
   <Route path='/*' element={<Navigate to="/" /> }></Route>
  </Routes>
