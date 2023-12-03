@@ -12,6 +12,9 @@ import NestedRoute from './component/NestedRoute';
 import Pg1 from './component/Pg1';
 import Pg3 from './component/Pg3';
 import Pg2 from './component/Pg2';
+import Login from './component/Login';
+import ProtectedPG from './component/ProtectedPG';
+import ProtectionMiddleWare from './component/ProtectionMiddleWare';
 
 function App() {
   return (
@@ -20,7 +23,9 @@ function App() {
  <Navbar/>
  <Routes>
   <Route path='/' element={<Home/>}></Route>
+  <Route path='/login' element={<Login/>}></Route>
   <Route path='/home' element={<Home/>}></Route>
+  <Route path='/ProtectedPG' element={<ProtectionMiddleWare Component={ProtectedPG}/>}/>
   <Route path='/about' element={<About/>}></Route>
   <Route path='/blog' element={<Blog/>}></Route>
   <Route path='/user/:name' element={<User/>}></Route>

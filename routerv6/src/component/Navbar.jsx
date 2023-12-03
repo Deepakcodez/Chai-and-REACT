@@ -11,6 +11,8 @@ function Navbar() {
             <li><NavLink to='/searchparam'>searchParam</NavLink> </li>
             <li><NavLink to='/navigate'>navigate</NavLink> </li>
             <li><NavLink to='/nestedRout'>NestedRout</NavLink> </li>
+            <li><NavLink to='/login'>Login</NavLink> </li>
+            <li><NavLink to='/ProtectedPG'>protected page</NavLink> </li>
         </ul>
      </div>
     </>
