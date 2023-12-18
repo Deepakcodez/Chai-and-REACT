@@ -23,7 +23,7 @@ function AxiosData() {
       <div className='flex flex-wrap'>
         {data.map((post, index) => (
           <div key={index} className='bg-blue-200 h-50 w-60 p-2 m-2'>
-            <h2>{post.title.slice(1,10).toUpperCase()}</h2>
+            <h2>{post.title.slice(1,10).toUpperC~ase()}</h2>
             <p>{post.body}</p>
           </div>
         ))}
