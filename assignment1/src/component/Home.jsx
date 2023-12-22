@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Fragment,  useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { cartContext } from "../Context";
 
@@ -9,12 +9,9 @@ const Home = () => {
   let [products, setProducts] = useState([]);
   let [filteredProducts, setFilteredProducts] = useState([]);
   let [radiovalue, setRadioValue] = useState("");
-    
-//context 
-       const{cart,setCart}=useContext(cartContext)
 
-
-
+  //context
+  const { cart, setCart } = useContext(cartContext);
 
   //   searchHandler
   const searchHandler = (e) => {
@@ -25,8 +22,6 @@ const Home = () => {
     );
     setFilteredProducts(searchFiltered);
   };
-
-
 
   // radio button handler
 
@@ -42,21 +37,8 @@ const Home = () => {
     // console.log('>>>>>>>>>>>price filtered', priceFilteredProduct)
     setFilteredProducts(priceFilteredProduct);
   };
-  
 
-
-
-
-console.log('>>>>>>>>>>>', cart)
-
-
-
-
-
-
-
-
-
+  console.log(">>>>>>>>>>>", cart);
 
   useEffect(() => {
     try {
@@ -76,7 +58,7 @@ console.log('>>>>>>>>>>>', cart)
     <>
       {/* search  */}
       <>
-        <div className="home flex justify-center mt-3">
+        <div className="home flex justify-center mt-3 px-2">
           <input
             type="text"
             value={search}
@@ -89,10 +71,10 @@ console.log('>>>>>>>>>>>', cart)
         </div>
       </>
 
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row">
         {/* sidebar */}
         <>
-          <div className="sidebar h-screen  min-w-[15rem] mt-5 ms-3 rounded-md  bg-slate-200 me-9 ">
+          <div className="sidebar h-auto min-h-[100vh]:  min-w-[10rem] mt-5 ms-3 rounded-md  bg-slate-200 me-9 hidden sm:inline-block  ">
             <div className="p-4 mt-8 float-end flex flex-col gap-6">
               <div className="flex gap-3">
                 <input
@@ -130,13 +112,43 @@ console.log('>>>>>>>>>>>', cart)
                 />
                 <label htmlFor="price">less than 2000</label>
               </div>
+              <div className="flex gap-3">
+                <input
+                  type="radio"
+                  name="price"
+                  value={2000000}
+                  onChange={radioHandler}
+                />
+                <label htmlFor="price">All</label>
+              </div>
             </div>
+          </div>
+        </>
+
+        {/* topbar  for mobile veiw  */}
+        <>
+          <div className="flex justify-center">
+            <select
+              name="priceFilter"
+              id="priceFilter"
+              className="sm:hidden bg-blue-500 p-1 rounded-md text-white w-40 my-3 "
+              onChange={radioHandler}
+            >
+              <option value="" selected disabled>
+                filter by price
+              </option>
+              <option value={100}>less than 100</option>
+              <option value={500}>less than 500</option>
+              <option value={1000}>less than 1000</option>
+              <option value={2000}>less than 2000</option>
+              <option value={2000000000}>All</option>
+            </select>
           </div>
         </>
 
         {!isloading ? (
           <>
-            <div className="products flex  justify-center sm:justify-start   flex-wrap  max-w-[70rem] w- gap-4 mt-3 p-2 px-4 ">
+            <div className="products flex  justify-center sm:justify-start   flex-wrap  max-w-[70rem] w- gap-8 mt-3 p-2 px-4 ">
               {(search === "" && radiovalue === ""
                 ? products
                 : filteredProducts
@@ -158,23 +170,35 @@ console.log('>>>>>>>>>>>', cart)
                         {product.description}
                       </div>
                       {/* button logic */}
-                      {!cart.some((cartProduct) => cartProduct.id === product.id)?
+                      {!cart.some(
+                        (cartProduct) => cartProduct.id === product.id
+                      ) ? (
                         <div className="mt-2">
-                        <button className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
-                        onClick={()=>{setCart([...cart,product])}}
-                        >
-                          add to cart
-                        </button>
-                      </div>:
-                       <div className="mt-2">
-                       <button className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
-                       onClick={()=>{setCart(cart.filter((cartprod)=>cartprod.id!==product.id))}}
-                       >
-                         remove from cart
-                       </button>
-                     </div>
-                      }
-                      
+                          <button
+                            className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
+                            onClick={() => {
+                              setCart([...cart, product]);
+                            }}
+                          >
+                            add to cart
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="mt-2">
+                          <button
+                            className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
+                            onClick={() => {
+                              setCart(
+                                cart.filter(
+                                  (cartprod) => cartprod.id !== product.id
+                                )
+                              );
+                            }}
+                          >
+                            remove from cart
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </Fragment>
                 );
