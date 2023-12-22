@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* logo  */}
         <NavLink to={"/home"}>
           {" "}
-          <div className="logo font-bold text-2xl">Shop APP</div>
+          <div className="logo font-bold text-2xl">Shopping APP</div>
         </NavLink>
 
         {/* mid of nav  */}
