@@ -11,13 +11,13 @@ export default function Navbar() {
 {/* mid of nav  */}
     <ul className="menu flex gap-3">
         <li><NavLink to={"/home"} >Home</NavLink> </li>
+        <li><NavLink to={"/cart"}>cart</NavLink> </li>
         <li><NavLink to={"/about"}>About</NavLink> </li>
     </ul>
 
 {/* right side of nav  */}
-    <div className="cart">
-        {/* <NavLink to={"/login"} className={"bg-blue-500 px-3 py-1 rounded-md text-white shadow-lg"}>Login</NavLink>  */}
-        
+    <div className="cart"> 
+        cart
         </div>
 </div>
 </> 

@@ -1,6 +1,7 @@
 import axios from "axios";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment,  useContext, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { cartContext } from "../Context";
 
 const Home = () => {
   let [search, setSearch] = useState("");
@@ -8,6 +9,12 @@ const Home = () => {
   let [products, setProducts] = useState([]);
   let [filteredProducts, setFilteredProducts] = useState([]);
   let [radiovalue, setRadioValue] = useState("");
+    
+//context 
+       const{cart,setCart}=useContext(cartContext)
+
+
+
 
   //   searchHandler
   const searchHandler = (e) => {
@@ -18,6 +25,8 @@ const Home = () => {
     );
     setFilteredProducts(searchFiltered);
   };
+
+
 
   // radio button handler
 
@@ -33,6 +42,21 @@ const Home = () => {
     // console.log('>>>>>>>>>>>price filtered', priceFilteredProduct)
     setFilteredProducts(priceFilteredProduct);
   };
+  
+
+
+
+
+console.log('>>>>>>>>>>>', cart)
+
+
+
+
+
+
+
+
+
 
   useEffect(() => {
     try {
@@ -133,11 +157,24 @@ const Home = () => {
                       <div className="discription truncate text-gray-400 text-sm">
                         {product.description}
                       </div>
-                      <div className="mt-2">
-                        <button className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md ">
+                      {/* button logic */}
+                      {!cart.some((cartProduct) => cartProduct.id === product.id)?
+                        <div className="mt-2">
+                        <button className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
+                        onClick={()=>{setCart([...cart,product])}}
+                        >
                           add to cart
                         </button>
-                      </div>
+                      </div>:
+                       <div className="mt-2">
+                       <button className="bg-blue-500 px-2 rounded-sm text-white py-1 shadow-md "
+                       onClick={()=>{setCart(cart.filter((cartprod)=>cartprod.id!==product.id))}}
+                       >
+                         remove from cart
+                       </button>
+                     </div>
+                      }
+                      
                     </div>
                   </Fragment>
                 );

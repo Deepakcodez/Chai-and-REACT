@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const selectCart = (state) => state.cart;
 
@@ -10,7 +10,9 @@ function Navbar() {
     <>
       <div className="nav bg-slate-600 h-10 w-full flex justify-between px-5 text-white items-center font-semibold">
         <h1> REDUX TOOLKIT</h1>
-        <h1 className='pe-20'>cart({cart.length}) {totalPrice}</h1>
+        <h1 className="pe-20">
+          cart({cart.length}) {totalPrice}
+        </h1>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import Home from "./component/Home";
 import { Login } from "./component/Login";
 import { About } from "./component/About";
 import { Routprotector } from "./component/middleware/Routprotector";
+import { Cart } from "./component/Cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/home' element={<Routprotector Component={Home}/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
         </Routes>
       </main>
     </>
